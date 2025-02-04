@@ -1,11 +1,36 @@
+.mainPhotoBlock {
+    width: 20vw;
+    min-height: 35vh;
+    border: 1px solid snow;
+    text-align: center;
+    margin: 2%;
+}
+
+.mainPhotoBlock h2 {
+    padding-bottom: 2%;
+    margin: 2%;
+    border-bottom: 1px solid snow;
+}
+
 .mainPhotosBox {
-    width: 12vw;
-    height: 18vh;
+    width: 20vw;
+    min-height: 30vh;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .photoBox {
-    padding: 1%;
+    width: 6vw;
+    height: 8vh;
+    padding: 5px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.photoBox img {
+    width: 100%;  /* Ensures image fits within .photoBox */
+    height: 100%;
+    object-fit: cover;  /* Keeps aspect ratio */
 }
