@@ -1,0 +1,11 @@
+.mainPhotosBox {
+    width: 12vw;
+    height: 18vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photoBox {
+    padding: 1%;
+}

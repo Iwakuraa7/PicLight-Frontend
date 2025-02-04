@@ -1,0 +1,15 @@
+.navBox {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 7vh;
+    border: 2px solid black;
+    margin: 1px;
+}
+
+.accImgRes {
+    width: 4vw;
+    height: 4vh;
+}
