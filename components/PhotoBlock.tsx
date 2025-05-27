@@ -1,19 +1,16 @@
 import styles from '../styles/PhotoBlock.module.css'
+import PhotoBlockProps from '../src/types/PhotoBlockProps';
+import { useNavigate } from 'react-router-dom';
 
-interface Photo {
-    id: number;
-    url: string;
-}
+export default function PhotoBlock({ photos, year }: PhotoBlockProps) {
+    const navigate = useNavigate();
 
-interface PhotoBlockProps {
-    photos: Photo[];
-    year: number;
-}
+    const handleClick = () => {
+        navigate(`/account/${year}`)
+    }
 
-export default function PhotoBlock({ photos, year }: PhotoBlockProps)
-{
     return(
-        <div className={styles['mainPhotoBlock']}>
+        <div onClick={() => handleClick()} className={styles['mainPhotoBlock']}>
             <h2>{year}</h2>
             <div className={styles['mainPhotosBox']}>
                 {photos.map((photo: {id: number, url: string}) => (
