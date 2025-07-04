@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-import Input from '../components/Input'
 import NavBox from '../components/NavBox'
 import styles from '../styles/HomePage.module.css'
 import { useEffect, useState } from 'react'

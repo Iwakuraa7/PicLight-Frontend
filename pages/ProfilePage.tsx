@@ -1,4 +1,3 @@
-import React from 'react'
 import PhotoBlock from '../components/PhotoBlock'
 import styles from '../styles/ProfilePage.module.css'
 import { useParams } from "react-router-dom"
