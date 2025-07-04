@@ -5,6 +5,8 @@ import ProfilePage from '../pages/ProfilePage.tsx'
 import UploadTestPage from '../pages/UploadTestPage.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import UserPhotos from '../pages/UserPhotos.tsx'
+import SignInPage from '../pages/SignInPage.tsx'
+import SignUpPage from '../pages/SignUpPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
     element: <HomePage/>
   },
   {
-    path: "/account",
+    path: "/account/:username",
     element: <ProfilePage/>
   },
   {
@@ -20,8 +22,16 @@ const router = createBrowserRouter([
     element: <UploadTestPage/>
   },
   {
-    path: "/account/:year",
+    path: "/account/:username/:year",
     element: <UserPhotos/>
+  },
+  {
+    path: "/signin",
+    element: <SignInPage/>
+  },
+  {
+    path: "/signup",
+    element: <SignUpPage/>
   }
 ])
 

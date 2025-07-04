@@ -1,6 +1,4 @@
-import Photo from "./photo";
-
 export default interface PhotoBlockProps {
-    photos: Photo[];
+    username: string | undefined;
     year: number;
 }

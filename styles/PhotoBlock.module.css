@@ -1,7 +1,7 @@
 .mainPhotoBlock {
     width: 20vw;
     min-height: 35vh;
-    border: 1px solid snow;
+    border: 1px solid #333;
     text-align: center;
     margin: 2%;
 }
@@ -9,7 +9,7 @@
 .mainPhotoBlock h2 {
     padding-bottom: 2%;
     margin: 2%;
-    border-bottom: 1px solid snow;
+    border-bottom: 1px solid #333;
 }
 
 .mainPhotosBox {

@@ -1,0 +1,147 @@
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    width: 100vw;
+    gap: 2rem;
+}
+
+.main-box h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0;
+    color: #333;
+}
+
+.photos-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.photo-block {
+    position: relative;
+    aspect-ratio: 3 / 4; /* Default to vertical-like ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.photo-block:hover {
+    transform: scale(1.03);
+}
+
+.photo-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.context-menu {
+    background-color: #f8f9fa;
+    border: 1px solid snow;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding: 0.2rem;
+    border-radius: 0px;
+}
+
+.context-menu-item {
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.context-menu-item:hover {
+    background-color: snow;
+}
+
+.currPhoto {
+    position: absolute;
+    display: flex;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    border: 2px solid white;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    animation: fadeScaleIn 0.35s ease-out;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    animation: fadeIn 0.3s ease;
+}
+
+.currPhoto img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0px;
+    box-shadow: 0 0 20px white;
+}
+
+@keyframes fadeScaleIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

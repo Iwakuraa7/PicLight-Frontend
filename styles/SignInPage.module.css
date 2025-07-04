@@ -1,0 +1,68 @@
+/* Center the form both vertically and horizontally */
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+/* The form card */
+.signInForm {
+  background: white;
+  padding: 2rem; /* changed from 2rem 3rem */
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center; /* ensures inner content is centered horizontally */
+}
+
+/* Inputs */
+.signInForm input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.signInForm input:focus {
+  border-color: #333;
+}
+
+/* Error messages */
+.errorMessage {
+  color: #b00020;
+  font-size: 0.875rem;
+  margin-top: -1rem;
+}
+
+/* Submit button */
+.signInForm button {
+  padding: 0.75rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.signInForm button:hover:not(:disabled) {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+.signInForm button:disabled {
+  background-color: #999;
+  cursor: default;
+}
