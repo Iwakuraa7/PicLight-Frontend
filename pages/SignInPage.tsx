@@ -59,7 +59,7 @@ export default function SignInPage() {
 
     return (
         <div className={styles.signInContainer}>
-          <h1>PicLight CI/CD TEST2</h1>
+          <h1>PicLight CI/CD TEST3</h1>
           <form onSubmit={handleSubmit(onSubmit)} className={styles.signInForm}>
             <input {...register("username")} type="text" placeholder="Username" />
             {errors.username && (
