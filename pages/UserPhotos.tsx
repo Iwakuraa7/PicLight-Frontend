@@ -11,7 +11,6 @@ export default function UserPhotos() {
     const [currPhoto, setCurrPhoto] = useState<{ visible: boolean, url: string } | null>(null);
     const [files, setFiles] = useState<FileList | null>(null);
     const [isAdmin, setIsAdmin] = useState<boolean>(true);
-
     const [contextMenu, setContextMenu] = useState<{ x: number, y: number, id: number } | null>(null);
 
     // Check if user is admin
