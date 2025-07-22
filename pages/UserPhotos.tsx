@@ -13,7 +13,7 @@ export default function UserPhotos() {
     const [isAdmin, setIsAdmin] = useState<boolean>(true);
     const [contextMenu, setContextMenu] = useState<{ x: number, y: number, id: number } | null>(null);
 
-    // Check if user is admin
+    // Check if current user is admin
     useEffect(() => {
       if(token !== null) {
         var userInfo = jwtDecode(token);
