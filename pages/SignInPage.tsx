@@ -33,7 +33,7 @@ export default function SignInPage() {
     });
 
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
-        const response = await fetch("http://localhost:5122/api/account/login", {
+        const response = await fetch("http://56.228.9.140/api/account/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

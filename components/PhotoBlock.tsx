@@ -15,7 +15,7 @@ export default function PhotoBlock({ username, year }: PhotoBlockProps) {
 
     useEffect(() => {
         const fetchUserPhotos = async () => {
-            const response = await fetch(`http://localhost:5122/api/photo/account/${username}/${year}`, {
+            const response = await fetch(`http://56.228.9.140/api/photo/account/${username}/${year}`, {
                 headers: {
                     "Authorization": "Bearer " + token
                 }

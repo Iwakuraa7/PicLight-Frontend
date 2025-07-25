@@ -34,7 +34,7 @@ export default function SignUpPage() {
     });
 
     const onSubmit: SubmitHandler<FormFields> = async (data) => {
-        const response = await fetch("http://localhost:5122/api/account/register", {
+        const response = await fetch("http://56.228.9.140/api/account/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
