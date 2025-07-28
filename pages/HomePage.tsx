@@ -36,7 +36,7 @@ export default function HomePage()
             return;
         };
 
-        const response = await fetch(`http://56.228.9.140/api/account/${qu}`);
+        const response = await fetch(`http://16.170.221.10/api/account/${qu}`);
         const result = await response.json();
 
         if(result.succeeded) {

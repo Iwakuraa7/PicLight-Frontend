@@ -26,7 +26,7 @@ export default function UserPhotos() {
 
     // Refresh photos
     const fetchData = async () => {
-      const response = await fetch(`http://56.228.9.140/api/photo/account/${username}/${year}`, {
+      const response = await fetch(`http://16.170.221.10/api/photo/account/${username}/${year}`, {
           headers: {
               "Authorization": "Bearer " + token
           },
@@ -45,7 +45,7 @@ export default function UserPhotos() {
             formData.append("file", files[i]);
             formData.append("title", files[i].name.replace(/\.[^/.]+$/, ""));
 
-            var response = await fetch(`http://56.228.9.140/api/photo/upload/${year}`, {
+            var response = await fetch(`http://16.170.221.10/api/photo/upload/${year}`, {
                 method: "POST",
                 headers: {
                     "Authorization": "Bearer " + token
@@ -64,7 +64,7 @@ export default function UserPhotos() {
     // Delete photo
     const handleDelete = async () => {
         if(!contextMenu) return;
-        const response = await fetch("http://56.228.9.140/api/photo/delete", {
+        const response = await fetch("http://16.170.221.10/api/photo/delete", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
